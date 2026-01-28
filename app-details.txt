@@ -1,0 +1,78 @@
+FexChat App Details
+===================
+
+1. UI Theme & Color Palette
+---------------------------
+The app uses a "Futuristic / Neon" dark theme.
+
+*   **Background Color**: #050510 (Very dark blue/black)
+*   **Surface Color**: #101020 (Slightly lighter dark blue)
+*   **Primary Color**: #00F0FF (Cyan Neon) - Used for buttons, active elements.
+*   **Secondary Color**: #7000FF (Purple Neon) - Used for gradients/accents.
+*   **Accent Color**: #FFFF0055 (Pink Neon) - Used for errors or highlights.
+*   **Text Colors**: 
+    *   Primary: White (#FFFFFF)
+    *   Secondary: White with 54% opacity.
+*   **Typography**: "Poppins" font family from Google Fonts.
+
+2. App Features
+---------------
+FexChat is a social networking app focused on real-time communication and daily stories.
+
+*   **Authentication & Security**:
+    *   Email/Password Login & Signup.
+    *   **Face Verification**: Identity verification using ML Kit face detection. Users must align their face to capture a verification image.
+
+*   **Stories (FexStories)**:
+    *   **Daily Limit**: Users can post only ONE story per day.
+    *   **Live Capture**: Stories are captured directly from the camera ("Live" feel).
+    *   **Spotify Integration**: Users can attach a Spotify track link to their story, which plays via an embedded player.
+    *   **Ephemeral**: Stories expire after 24 hours.
+    *   **Captions**: Add text captions to stories.
+
+*   **Chat (Real-time Messaging)**:
+    *   **Instant Messaging**: Real-time chat powered by Supabase.
+    *   **Offline Support**: Messages are cached locally (using SQLite/sqflite) for offline viewing.
+    *   **Optimistic UI**: Messages appear instantly before syncing to the server.
+    *   **Privacy**: Option to clear chat history (deletes local copy).
+
+*   **Social**:
+    *   **User Search**: Search for other users by username.
+    *   **Profiles**: View user profiles (username, photo, email).
+
+3. Step-by-Step Usage Guide
+---------------------------
+
+### Phase 1: Onboarding
+1.  **Sign Up**: Open the app and click "Sign Up". Enter your email and create a password.
+2.  **Login**: Use your credentials to log in.
+3.  **Face Verification**: 
+    *   You will be prompted to verify your identity.
+    *   Allow camera permissions.
+    *   Align your face within the frame.
+    *   Wait for the "Face Detected" and "Verification Successful" messages.
+
+### Phase 2: Connecting with Others
+1.  **Find Friends**:
+    *   Go to the **Search** tab (Magnifying glass icon).
+    *   Type a username in the search bar.
+    *   Tap on a user from the results to open a chat.
+2.  **Chatting**:
+    *   Type your message in the text field and hit send.
+    *   Your message sends instantly.
+    *   To clear history: Tap the options (if available) or use the specific "Clear Chat" feature (implied in code logic).
+
+### Phase 3: Sharing Your Day (Stories)
+1.  **Create a Story**:
+    *   Navigate to the **Story** creation screen (usually a Camera icon or "Add Story" button).
+    *   **Camera**: The camera opens immediately. Snap a photo of your current moment.
+2.  **Customize**:
+    *   **Spotify**: Paste a Spotify track link (e.g., `open.spotify.com/track/...`) in the music field.
+    *   **Caption**: Write a short description.
+3.  **Post**:
+    *   Tap **POST TO STORY**.
+    *   *Note*: If you have already posted today, the app will prevent a second post.
+
+### Phase 4: Profile & Settings
+1.  **Profile**: Go to the Profile tab to view your details.
+2.  **Edit**: Use the "Edit Profile" button to update your photo or display name.
